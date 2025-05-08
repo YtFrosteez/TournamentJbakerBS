@@ -58,6 +58,10 @@ html {
     outline: none;
   }
 
+.formulaire{
+  display: none;
+}
+
   .cal{
     font-family: 'Sansation';
     font-weight: 600;
@@ -107,7 +111,7 @@ html {
   }
 
   #formulaire{
-    display: none;
+    display: block;
     text-align: left;
     justify-content: flex-start;
     scroll-margin-top: 120px;
@@ -255,9 +259,9 @@ html {
 
   @media screen and (max-width: 750px){
 
-    #formulaire{
-    display: none;
-  }
+  .formulaire{
+  display: none;
+}
 
   .cal{
     font-family: 'Sansation';
