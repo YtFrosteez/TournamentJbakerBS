@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+  a{
+    text-decoration: none;
+  }
+
+  body {
+    font-family: 'Urbanist', sans-serif;
+    background: #fff,;
+    color: #000;
+    font-size: 1.2rem;
+  }
+
+  button {
+    background-color: #268E3A;        /* vert doux */
+    color: white;                     /* texte blanc */
+    padding: 12px 24px;               /* espace intérieur */
+    border: none;                     /* pas de bordure */
+    border-radius: 8px;               /* coins arrondis */
+    font-size: 16px;                  /* taille du texte */
+    cursor: pointer;                  /* curseur main */
+    transition: background-color 0.3s ease; /* effet de transition */
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #42bd37;        /* vert un peu plus foncé au survol */
+    border: 4px solid #18862e;
+    color: #fff;
+
+  }
+  
+  .strong{
+    font-size: 24px;
+  }
+  .titre{
+    font-family: 'Cal Sans';
+  }
+
+  input, textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 4px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #268E3A;
+    outline: none;
+  }
+
+  .cal{
+    font-family: 'Sansation';
+    font-weight: 600;
+  }
+  
+  .formulaire p{
+    justify-content: flex-start;
+    font-weight: bold;
+  }
+
+  .formulaire button{
+    text-align: center;
+  }
+
+  .formulaire a{
+    text-decoration: none;
+    color: #268E3A;
+    font-weight: bold;
+  }
+
+  .gamemode{
+    width: 10%;
+    height: auto;
+    padding: 2%;
+    margin-bottom: 10px;
+  }
+
+  h1{
+    font-size: 225%
+  }
+
+  h2{
+    padding-bottom: 20px;
+    margin-top: 40px;
+    font-size: 200%;
+  }
+
+  h3{
+    font-family: 'Cal Sans';
+    font-size: 185%;
+    font-weight: bold;
+  }
+
+  p{
+    font-size: 110%;
+    
+  }
+
+  #formulaire{
+    display: block;
+    text-align: left;
+    justify-content: flex-start;
+    scroll-margin-top: 120px;
+  }
+
+  .logo{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  header{
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  main {
+    padding-bottom: 20px;
+  }
+
+  #matchs{
+    padding: 20px;
+    background-image: url('images/bg1.png');
+    color: #fff;
+  }
+
+  #open{
+    padding-top: 20px;
+    color: #000;
+    scroll-margin-top: 120px;
+  }
+
+  #inscription{
+    margin-top: 20px;
+    padding: 40px 0px 40px 0px;
+    color: #fff;
+    background: linear-gradient(to bottom, #245FC6, #2886EF);
+    
+  }
+
+  #contact{
+    color: #000;
+    background-image: url('images/bg3.png');
+    padding: 20px;
+    margin-top: 40px;
+  }
+  #pfooter{
+    color: #000;
+    font-weight: bold;
+  }
+
+  #footer{
+    padding-top: 80px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #000;
+  }
+
+  #img2{
+    width: 100%;
+    height: 1%;
+    padding-top: 20px;
+  }
+
+  #ORGANISATION{
+    padding-bottom: 10px;
+  }
+  
+  .email a {
+    color: #000;
+    background-color: rgba(30, 78, 210, 0.459);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .inscription {
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+
+  section{
+    text-align: center;
+    scroll-margin-top: 80px; /* adapte à la hauteur de ta navbar */
+  }
+
+  .inscription li{
+    padding: 5px;
+  }
+
+  .navbar{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    background-color: #000000f5;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px 20px 0px 20px;
+    align-items: center;
+  }
+
+  .navbar a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar #JBaker{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .navbar .nav-links ul {
+    display: flex;
+    padding-bottom: 10px;
+  }
+
+  .navbar .nav-links ul li{
+    display: flex;
+    margin: 0px 15px;
+    font-size: 1.1rem;
+  }
+
+  .navbar .menu-hamburger{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    padding-bottom: 10px;
+    height: auto;
+    width: 40px;
+    display: none;
+  }
+
+  .navbar #JBaker{
+    padding: 20px 30px;
+  }
+
+
+  @media screen and (max-width: 750px){
+
+  .cal{
+    font-family: 'Sansation';
+    font-weight: 600;
+  }
+
+    .navbar{
+      padding: 0px;
+      left: 0px;
+    }
+
+    .navbar .menu-hamburger{
+      display: block;
+      top: 15px;
+    }
+
+    .nav-links{
+      position: absolute;
+      background-color: #000000f5;
+      width: 100%;
+      height: 100vh;
+      top: 66px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1000%;
+      transition: all 0.45s ease;
+    }
+
+    .nav-links.mobile-menu{
+      margin-top: 0px;
+  }
+
+    .nav-links ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar .nav-links ul li{
+      margin: 25px 0px;
+      font-size: 1.2rem;
+    }
+
+    .navbar #JBaker{
+      padding: 10px 30px 10px 30px;
+      font-family: 'Sansation';
+      font-weight: 600;
+    }
+    
+    body {
+      font-family: 'Urbanist', sans-serif;
+      background: #ffffff,;
+      color: #000;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    header{
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .logo{
+      width: 100%;
+      height: 100%;
+    }
+
+    .titre{
+      font-family: 'Cal Sans';
+    }
+  
+    #captcha{text-align: center;}
+    
+    .g-recaptcha{
+      align-items: center;
+      text-align: center;
+    }
+
+    .gamemode{
+      width: 7%;
+      height: auto;
+      padding: 2%;
+    }
+  
+    h1{
+      font-size: 175%
+    }
+  
+    h2{
+      margin-top: 20px;
+      font-size: 150%;
+      text-align: center;
+    }
+
+    h3{
+      font-family: 'Cal Sans';
+      font-size: 185%;
+      font-weight: bold;
+    }
+  
+    p{
+      font-size: 80%;
+      
+    }
+  
+    .logo{
+      width: 100%;
+      height: 100%;
+    }
+  
+    header{
+      text-align: center;
+    }
+  
+    #matchs{
+      padding: 5px;
+      background-image: url('images/bg1.png');
+      color: #fff;
+    }
+  
+    #open{
+      color: #000;
+    }
+  
+    #inscription{
+      margin-top: 6px;
+      padding: 30px 0px 40px 0px;
+      color: #fff;
+      background: linear-gradient(to bottom, #245FC6, #2886EF);
+      
+    }
+  
+    #contact{
+      color: #000;
+      background-image: url('images/bg3.png');
+      padding: 20px;
+      margin-top: 10px;
+    }
+    #pfooter{
+      color: #fff;
+      background-color: rgba(30, 78, 210, 0.459);
+    }
+  
+    #footer{
+      padding-top: 80px;
+      justify-content: center;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.8em;
+      color: #000;
+    }
+  
+    #img2{
+      width: 100%;
+      height: auto;
+      padding-top: 20px;
+    }
+  
+    #ORGANISATION{
+      padding-bottom: 10px;
+    }
+    
+    .email a {
+      color: #000;
+      background-color: rgba(30, 78, 210, 0.459);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .inscription {
+      list-style: none;
+      text-align: center;
+      display: inline-block;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+  
+    section{
+      text-align: center;
+    }
+  
+    .inscription li{
+      padding: 5px;
+      font-size: 0.6em;
+      text-align: center;
+    }
+
+    input, textarea {
+      width: 50%;
+      padding: 7px;
+      margin-bottom: 15px;
+      border: 3px solid #ccc;
+      border-radius: 8px;
+      font-size: 13px;
+      box-sizing: border-box;
+    }
+    
+    input:focus, textarea:focus {
+      border-color: #268E3A;
+      outline: none;
+    }
+    
+    .formulaire p{
+      justify-content: flex-start;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  
+    .formulaire a{
+      text-decoration: none;
+      color: #268E3A;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #268E3A;        /* vert doux */
+      color: white;                     /* texte blanc */
+      padding: 12px 24px;               /* espace intérieur */
+      border: none;                     /* pas de bordure */
+      border-radius: 8px;               /* coins arrondis */
+      font-size: 16px;                  /* taille du texte */
+      cursor: pointer;                  /* curseur main */
+      transition: background-color 0.3s ease; /* effet de transition */
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    button:hover {
+      background-color: #42bd37;        /* vert un peu plus foncé au survol */
+      border: 4px solid #18862e;
+      color: #fff;
+    }
+  }

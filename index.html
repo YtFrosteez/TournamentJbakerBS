@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tournoi Brawl Stars - Lycée</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a id="JBaker" class="titre" href="#">JBaker</a>
+
+    <div class="nav-links">
+      <ul>
+        <li><a href="#matchs">Matchs</a></li>
+        <li><a href="#open">Prérequis</a></li>
+        <li><a href="#inscription">Inscription</a></li>
+        <li><a href="#formulaire">Formulaire</a></li>
+      </ul>
+    </div>
+    <img src="images/list.png" class="menu-hamburger" alt="">
+  </nav>
+
+  <header class="titre">
+    <img class="logo" src="images/JB.jpg" alt="Shelly">
+    <h1>TENTEZ DE GAGNEZ LE TITRE DE MEILLEURS JOUEURS DU LYCEES</h1>
+  
+    <a href="#formulaire"><button class="cal">Remplir Formulaire</button></a>
+  </header>
+
+    <section id="matchs">
+      <div class="info">
+          <div class="text-info">
+            <h2 class="titre"><strong>⚔️ MATCHS 3V3 ⚔️</strong></h2>
+            <p class="cal">Paticipez par équipe de 3  et tentez de gagner la compétition !</p>
+            <p>BO3 - quarts de finale <br> BO5 - demi finale <br> BO7 - finale</p>
+            <p>Jouez à ces différents mode de jeu :</p>
+          </div>
+          <div>
+            <img src="images/Gamemode/BB.png" class="gamemode">
+            <img src="images/Gamemode/BR.png" class="gamemode">
+            <img src="images/Gamemode/HJ.png" class="gamemode">
+            <img src="images/Gamemode/PR.png" class="gamemode">
+            <img src="images/Gamemode/RG.png" class="gamemode">
+            <img src="images/Gamemode/ZR.png" class="gamemode">
+          </div>
+      </div>
+    </section>
+    <section id="open">
+      <div class="info">
+          <div class="text-info">
+            <h2 class="titre"><strong>OUVERT A TOUS</strong></h2>
+            <p>Peut importe le niveau...</p>
+            <p class="cal"> TOUT LE MONDE PEUT PARTICIPER !</p>
+            <p>Vous pouvez venir pour tryhard tout comme pour vous amusez. </p>
+          </div>
+      </div>
+      <img src="images/bg2.png" id="img2" alt="">
+    </section>
+
+    <section id="inscription">
+      <h2 class="titre">MODALITÉES D'INSCRIPTION</h2>
+      <p class="cal">Remplissez le formulaire pour pouvoir vous inscrire.</p>
+      <p>Votre message doit contenir :</p>
+      <ul class="inscription">
+        <li>✅ Le nom de votre équipe</li>
+        <li>✅ Les ID Supercell des joueurs</li>
+      </ul>
+    </section>
+
+    <section id="formulaire">
+      <p id="captcha"  class="cal">Validez le CAPTCHA pour afficher le formulaire</h2>
+      <div class="g-recaptcha" data-sitekey="VOTRE_SITE_KEY" data-callback="captchaValide"></div>
+      <div class="formulaire">
+        <h2 class="titre">FORMULAIRE</h2>
+        <form action="https://formsubmit.co/josephinebakerbs@gmail.com" method="POST" enctype="multipart/form-data" value="Nouveau message depuis le site !">
+          <input type="text" name="nom" placeholder="Nom" required><br>
+          <input type="text" name="prenom" placeholder="Prénom" required><br>
+          <input type="email" name="email" placeholder="Email" required><br>
+          <p class="cal">Ecrivez votre message en y inscrivant toutes les informations écrites dans les <br><a href="#inscription">modalités d'inscription</a>.</p>
+          <textarea name="message" placeholder="Message" required></textarea><br>
+
+          <p class="cal">Importez le logo de votre équipe :</p>
+          <input type="file" name="Logo" required><br>
+          <p class="cal">Importer les emplois du temps :</p>
+          <input type="file" name="Emploie du temps 1" required><br>
+          <input type="file" name="Emploie du temps 2"><br>
+          <input type="file" name="Emploie du temps 3"><br>
+
+          <!-- désactiver captcha FormSubmit -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://tonsite.github.io/merci.html">
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1 class="titre">NOW IT'S TIME TO BRAWL !</h1>
+      <p id="pfooter" class="cal">Organisé par : FROSTEEZ 🧊</p>
+    </section>
+
+</body>
+<script>
+  const menuHamburger = document.querySelector(".menu-hamburger")
+  const navLinks = document.querySelector(".nav-links")
+  const navItems = document.querySelectorAll(".nav-links a");
+
+
+  menuHamburger.addEventListener('click',()=>{
+  navLinks.classList.toggle('mobile-menu')
+  })
+
+
+  navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('mobile-menu');
+  });
+  });
+  
+  document.addEventListener('click', (event) => {
+  // Si le clic n’est PAS dans .nav-links ni dans .menu-hamburger
+  if (
+    !navLinks.contains(event.target) &&
+    !menuHamburger.contains(event.target)
+  ) {
+    navLinks.classList.remove('mobile-menu');
+  }
+});
+
+function captchaValide() {
+      document.getElementById('formulaire').style.display = 'block';
+    }
+</script>
+</html>
